@@ -1,0 +1,18 @@
+The .m file code will compute orientation as well as irregularity measure and plot
+them on the same figure under title "Orientation Map" and "Irregularity Map Image"
+respectively. For getting these two images for each of the 10 fingerprints all you
+need to do is provide the path of each input image correctly in the imread argument
+at line 11 of the code.
+
+Algorithm for computing orientations
+
+1. Gradients Gx and Gy are computed at each piexel
+2. Gxx, Gyy, Gxy are computed according to the following
+   formula:- Gxx= square of Gx,
+   			 Gyy= square of Gy,
+   			 Gxy= Gx*Gy
+3. The orientations are calculated by using the following formula
+ 
+   theta = pi/2 + (1/2)arctan(2*Gxy/(Gxx-Gyy))
+
+I am providing a spacing of 15 units between orientation line segments
